@@ -1,0 +1,28 @@
+.article {
+  display: flow-root;
+  width: 100%;
+  max-width: var(--content-width);
+  padding: 24px;
+  box-sizing: border-box;
+  grid-area: content;
+  background: white;
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+
+.articleTitle {
+  font-weight: 200;
+  font-size: 36px;
+  margin: 24px 0;
+  line-height: 40px;
+}
+
+@media (min-width: 640px) {
+  .article {
+    margin: 24px 0;
+    padding: 36px;
+    border-radius: 2px;
+  }
+}

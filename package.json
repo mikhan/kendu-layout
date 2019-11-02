@@ -1,0 +1,46 @@
+{
+  "name": "kendu-app",
+  "version": "0.0.1",
+  "description": "A small scaffold to get you started using React with Webpack",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "jsx-loader": "^0.13.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "sass": "^1.23.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "lit-element": "^2.2.1",
+    "typescript": "^3.6.4",
+    "@types/node": "^12.11.7",
+    "@types/express": "^4.17.1",
+    "ts-loader": "^6.2.1",
+    "@babel/preset-typescript": "^7.6.0",
+    "babel-loader": "^8.0.5",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "fibers": "^4.0.2",
+    "@fortawesome/fontawesome-free": "^5.11.2"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/starter-react"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

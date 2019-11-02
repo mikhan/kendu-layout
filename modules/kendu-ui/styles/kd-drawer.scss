@@ -1,0 +1,38 @@
+// Drawer content 
+
+kd-drawer .drawerContent:first-of-type {
+  flex-grow: 1;
+}
+
+// Drawer item
+
+kd-drawer .drawerItem {
+  display: block;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0 20px;
+  margin: 0;
+  height: 48px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+kd-drawer .drawerItem:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+kd-drawer .drawerItem > i {
+  margin-right: 4px;
+}
+
+// Drawer header
+
+kd-drawer .drawerHeaderTitle {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}

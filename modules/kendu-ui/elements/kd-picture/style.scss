@@ -1,0 +1,18 @@
+.picture {
+  height: 80vh;
+  max-height: 360px;
+  width: 100%;
+  grid-area: picture;
+  background: url(https://web.dev/web-dev-io-2019/hero.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px var(--seam-color);
+}
+
+@media (min-width: 640px) {
+  .picture {
+    margin-bottom: -64px;
+  }
+}

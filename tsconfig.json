@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+		"moduleResolution": "node",
+		"noEmit": true,
+    "target": "esnext",
+		"isolatedModules": true,
+		"esModuleInterop": true,
+    "allowJs": true
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

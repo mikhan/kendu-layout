@@ -1,0 +1,88 @@
+@use "modules/kendu-ui/styles/icon-button.scss" as i;
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+.user {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
+  }
+}
+
+.twitter {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+}
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: none;
+  width: var(--drawer-width);
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 4;
+  transform: translateX(-100%);
+  grid-area: drawer;
+  overflow-y: auto;
+  border-right: 1px solid var(--seam-color);
+  transition: transform 250ms, box-shadow 250ms;
+  
+  & .__header {
+    display: flex;
+    height: var(--toolbar-height);
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  & .__content {
+    display: block;
+    border-top: 1px solid var(--seam-color);
+  }
+
+  & .__toggler {
+    @include i.iconButton;
+    margin-right: 8px;
+    
+    &:before {
+      content: "\f0c9";
+    }
+  }
+}
+
+:host([open]) {
+  transform: translateX(0%);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 896px) {
+  :host {
+    transform: initial;
+    position: sticky !important;
+    margin-left: calc(var(--drawer-width) * -1);
+    transition: margin-left 250ms, box-shadow 250ms;
+  }
+
+  :host([open]) {
+    transform: initial;
+    position: sticky !important;
+    margin-left: 0;
+  }
+
+  .__toggler.inactive {
+    margin-left: -36px;
+    opacity: 0;
+    pointer-events: none;
+  }
+}

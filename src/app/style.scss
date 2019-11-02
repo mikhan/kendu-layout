@@ -1,0 +1,72 @@
+@use 'modules/kendu-ui/elements/kd-article/style.scss' as kd-article;
+@use 'modules/kendu-ui/elements/kd-aside/style.scss' as kd-aside;
+@use 'modules/kendu-ui/elements/kd-footer/style.scss' as kd-footer;
+@use 'modules/kendu-ui/elements/kd-picture/style.scss' as kd-picture;
+@use 'modules/kendu-ui/elements/kd-toolbar/style.scss' as kd-toolbar;
+@use 'modules/kendu-ui/styles/kd-drawer.scss' as kd-drawer;
+@use 'modules/kendu-ui/styles/icon-button.scss';
+@use 'modules/kendu-ui/styles/typo.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  background: #e8eaed;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    --drawer-width: 256px;
+    --content-width: 640px;
+    --toolbar-height: 64px;
+    --aside-width: 320px;
+    --seam-color: rgba(0,0,0,0.15);
+}
+
+summary h1 {
+    display: inline;
+}
+
+summary {
+    outline: none;
+    cursor: pointer;
+}
+
+.backdrop {
+  opacity: 0;
+  transition: opacity 250ms;
+  z-index: 2;
+}
+
+.aside.active ~ .backdrop,
+.drawer.active ~ .backdrop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 2;
+    overscroll-behavior: contain;
+}
+
+@media (min-width: 896px) {
+  .backdrop {
+    width: 0 !important;
+    opacity: 0 !important;
+  }
+}

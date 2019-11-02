@@ -1,0 +1,69 @@
+@mixin iconButton {
+  position: relative;
+  background: none;
+  border: none;
+  color: inherit;
+  width: 28px;
+  padding: 0;
+  height: 28px;
+  outline: none;
+  opacity: 1;
+  transition: margin 250ms, opacity 250ms;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: currentColor;
+    transition: opacity 250ms;
+    border-radius: 100%;
+  }
+
+  &:hover:after {
+    opacity: 0.1;
+  }
+
+  &:active:after {
+    opacity: 0.2;
+  }  
+}
+
+.iconButton {
+  position: relative;
+  background: none;
+  border: none;
+  color: inherit;
+  width: 28px;
+  padding: 0;
+  height: 28px;
+  outline: none;
+  opacity: 1;
+  transition: margin 250ms, opacity 250ms;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: currentColor;
+    transition: opacity 250ms;
+    border-radius: 100%;
+  }
+
+  &:hover:after {
+    opacity: 0.1;
+  }
+
+  &:active:after {
+    opacity: 0.2;
+  }
+}

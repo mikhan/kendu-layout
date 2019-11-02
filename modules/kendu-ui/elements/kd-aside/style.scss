@@ -1,0 +1,79 @@
+.aside {
+  display: block;
+  grid-area: aside;
+  border-left: 1px solid var(--seam-color);
+  box-sizing: border-box;
+  padding: 0;
+  flex-direction: column;
+  background: white;
+  box-shadow: none;
+  width: var(--aside-width);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 4;
+  transform: translateX(100%);
+  overflow: auto;
+  overscroll-behavior: contain;
+  transition: opacity 250ms, top 250ms, margin-right 250ms, transform 250ms;
+}
+
+.aside.active {
+  transform: translateX(0);
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+@media (min-width: 896px) {
+  .aside {
+    position: sticky;
+    top: var(--toolbar-height);
+    height: calc(100vh - var(--toolbar-height));
+    background: none;
+    margin-right: calc(var(--aside-width) * -1);
+  }
+
+  .aside.active {
+    box-shadow: none;
+    margin-right: 0;
+    z-index: 0;
+  }
+}
+
+.asideHeaderTitle {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.aside.docked {
+  position: sticky;
+  top: var(--toolbar-height);
+  height: calc(100vh - var(--toolbar-height));
+  background: none;
+  margin-left: calc(var(--aside-width) * -1);
+  x-transition: margin-left 250ms;
+}
+
+.aside.docked.active {
+  display: block;
+  box-shadow: none;
+  margin-left: 0;
+  z-index: 0;
+}  
+
+.asideHeader {
+    height: var(--toolbar-height);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.assideContent {
+    padding: 0 16px;
+}

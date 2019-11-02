@@ -1,0 +1,18 @@
+:host {
+  display: grid;
+  min-height: 100vh;
+  width: 100%;
+  align-items: flex-start;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: min-content min-content 1fr min-content;
+  grid-template-areas: "drawer toolbar toolbar"
+                       "drawer picture aside"
+                       "drawer content aside"
+                       "drawer  footer aside";
+  contain: strict;
+}
+
+.appContent {
+  grid-area: content;
+  justify-self: center;
+}
